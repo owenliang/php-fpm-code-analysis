@@ -606,7 +606,7 @@ php_request_shutdown清理PHP执行环境，不需要展开。
 
 ### 父进程进入事件循环
 
-fpm_children_create_initial函数在初始的子进程生成后，父进程返回1，然后进入进入事件循环。
+fpm_children_create_initial函数在初始化子进程后，父进程返回1，然后进入事件循环。
 
 通常linux事件循环基于epoll实现，这里调用fpm_event_loop函数进入循环。
 
